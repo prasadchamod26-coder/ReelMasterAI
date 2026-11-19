@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceResponse;
 
 import androidx.webkit.WebViewAssetLoader;
-import androidx.webkit.WebViewClientCompat;
 
 public class MainActivity extends Activity {
 
@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
                 )
                 .build();
 
-        webView.setWebViewClient(new WebViewClientCompat() {
+        webView.setWebViewClient(new WebViewClient() {
 
             @Override
             public WebResourceResponse shouldInterceptRequest(
