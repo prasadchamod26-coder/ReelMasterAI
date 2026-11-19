@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReelMaster AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0c0a16;color:#fff;font-family:Arial,sans-serif}
+header{padding:22px 18px;background:linear-gradient(120deg,#241044,#11101d);border-bottom:1px solid #382454}
+.logo{font-size:25px;font-weight:800}
+.logo span{color:#bd83ff}
+.sub{color:#aaa;font-size:12px;margin-top:6px}
+.container{padding:18px;max-width:650px;margin:auto}
+.welcome{font-size:22px;font-weight:bold;margin:10px 0}
+.muted{color:#aaa;font-size:13px;line-height:1.5}
+.page{background:#191426;border:1px solid #49316b;padding:16px;border-radius:15px;margin:18px 0}
+.label{font-size:12px;color:#bda2dc}
+.page-name{font-size:17px;margin-top:8px;font-weight:bold}
+.badge{display:inline-block;background:#49316b;color:#d9bdff;padding:5px 10px;border-radius:20px;font-size:11px;margin-top:10px}
+h3{font-size:16px;margin:24px 0 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#191426;border:1px solid #30243f;border-radius:14px;padding:17px;min-height:112px}
+.icon{font-size:25px}
+.card b{display:block;margin-top:12px;font-size:14px}
+.card small{display:block;color:#aaa;margin-top:6px;font-size:11px;line-height:1.4}
+button{border:0;border-radius:10px;padding:12px 15px;background:#8d45d5;color:white;font-weight:bold;width:100%;margin-top:12px}
+.upload{background:linear-gradient(130deg,#55258b,#913ed2);padding:20px;border-radius:16px;margin-top:20px}
+.upload p{font-size:12px;color:#eee}
+.status{background:#201b2b;padding:14px;border-radius:12px;margin-top:12px;font-size:12px;color:#d2b5f3}
+.bottom{text-align:center;color:#777;font-size:11px;padding:28px 10px}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">ReelMaster <span>AI</span></div>
+ <div class="sub">CREATE. OPTIMIZE. PUBLISH. GROW.</div>
+</header>
+<main class="container">
+ <div class="welcome">Welcome to ReelMaster AI 👋</div>
+ <div class="muted">Your AI-powered Facebook Reels growth assistant.</div>
+
+ <div class="page">
+  <div class="label">ACTIVE FACEBOOK PAGE</div>
+  <div class="page-name">No Facebook Page Connected</div>
+  <span class="badge">CONNECTION REQUIRED</span>
+  <button onclick="alert('Facebook Login will be connected in the next development phase.')">Connect Facebook Account</button>
+ </div>
+
+ <div class="upload">
+  <div style="font-size:22px;font-weight:bold">🎬 Upload Your Video</div>
+  <p>AI will analyze your video and prepare Sinhala SEO content. Your original video will not be edited.</p>
+  <button onclick="document.getElementById('video').click()">Choose Video</button>
+  <input id="video" type="file" accept="video/*" hidden onchange="showVideo(this)">
+  <p id="filename">No video selected</p>
+ </div>
+
+ <h3>AI Workspace</h3>
+ <div class="grid">
+  <div class="card"><div class="icon">🔎</div><b>AI Trend Research</b><small>Research relevant trends and topics.</small></div>
+  <div class="card"><div class="icon">✍️</div><b>Sinhala SEO</b><small>Captions, keywords and hashtags.</small></div>
+  <div class="card"><div class="icon">🗓️</div><b>Publishing Queue</b><small>Manage planned publishing times.</small></div>
+  <div class="card"><div class="icon">📊</div><b>Analytics</b><small>Track Reel performance.</small></div>
+ </div>
+
+ <h3>Membership</h3>
+ <div class="page">
+  <b>FREE PLAN</b>
+  <p class="muted">Your current membership. Upgrade options will be added later.</p>
+  <span class="badge">FREE MEMBER</span>
+ </div>
+
+ <div class="status">⚙️ Facebook Login, AI Research and automatic publishing are not connected yet. These will be implemented in upcoming development phases.</div>
+ <div class="bottom">ReelMaster AI • Version 1.0</div>
+</main>
+<script>
+function showVideo(input){
+ const file=input.files[0];
+ if(file){
+  document.getElementById('filename').textContent='Selected: '+file.name;
+ }
+}
+</script>
+</body>
+</html>
