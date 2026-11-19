@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     private WebView webView;
 
     private static final String REMOTE_URL =
-        "https://cdn.jsdelivr.net/gh/prasadchamod26-coder/ReelMasterAI@main/app/src/main/assets/index.html";
+        "https://raw.githubusercontent.com/prasadchamod26-coder/ReelMasterAI/main/app/src/main/assets/index.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     private void loadRemotePage() {
         new Thread(() -> {
             try {
-                URL url = new URL(REMOTE_URL);
+                URL url = new URL(REMOTE_URL + "?t=" + System.currentTimeMillis());
                 HttpURLConnection connection =
                     (HttpURLConnection) url.openConnection();
 
